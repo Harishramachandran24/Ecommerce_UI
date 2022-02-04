@@ -135,7 +135,7 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                   );
                 },
                 child: SizedBox(
-                  height: 425,
+                  height: _height / 2,
                   width: _width - 45,
                   child: Container(
                     decoration: BoxDecoration(
@@ -180,7 +180,7 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top:15.0,left: 8.0),
+                          padding: const EdgeInsets.only(left: 8.0),
                           child: Column(
                             children: [
                               Row(
@@ -198,9 +198,9 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                               ),
                               const SizedBox(height: 10),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
                                 child: SizedBox(
-                                  height: 200,
+                                  height: _height / 4,
                                   width: _width - 100,
                                   child: Container(
                                     decoration: BoxDecoration(
@@ -237,7 +237,7 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                   );
                 },
                 child: SizedBox(
-                  height: 425,
+                  height: _height / 2,
                   width: _width - 45,
                   child: Container(
                     decoration: BoxDecoration(
@@ -282,7 +282,7 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top:15.0,left: 8.0),
+                          padding: EdgeInsets.only(left: 8.0),
                           child: Column(
                             children: [
                               Row(
@@ -300,9 +300,9 @@ class _CustomSliverAppbarState extends State<CustomSliverAppbar>
                               ),
                               const SizedBox(height: 10),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
                                 child: SizedBox(
-                                  height: 200,
+                                  height: _height / 4,
                                   width: _width - 100,
                                   child: Container(
                                     decoration: BoxDecoration(

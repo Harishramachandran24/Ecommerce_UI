@@ -59,7 +59,7 @@ class _show_prouctState extends State<show_product> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 38.0, bottom: 10),
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,43 +84,28 @@ class _show_prouctState extends State<show_product> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(
-                                  child: Column(
-                                    children:const [
-                                       Padding(
-                                        padding: EdgeInsets.all(18.0),
-                                        child: Text("Rs 50/pack (Fixed Price)",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.green)),
-                                      ),
-                                    ],
-                                  ),
+                                Column(
+                                  children: const [
+                                     Text("Rs 50/pack",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.green)),
+                                    Text("Fixed Price",style: TextStyle(
+                                        color: Colors.green)),
+                                  ],
                                 ),
-                                Expanded(
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 8.0),
-                                        child: MaterialButton(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(10),
-                                          ),
-                                          height: 40.0,
-                                          onPressed: () {},
-                                          color: Colors.green,
-                                          child: Row(
-                                            children: const [
-                                              Padding(
-                                                padding: EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "Buy Now",
-                                                  style: TextStyle(color: Colors.white),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
+                                MaterialButton(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  height: 40.0,
+                                  onPressed: () {},
+                                  color: Colors.green,
+                                  child: Row(
+                                    children: const [
+                                      Text(
+                                        "Buy Now",
+                                        style: TextStyle(color: Colors.white),
                                       ),
                                     ],
                                   ),

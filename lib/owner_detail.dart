@@ -115,16 +115,18 @@ class _showDetailState extends State<showDetail> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Column(
-                                  children: [
-                                    SizedBox(
-                                        height: 180,
-                                        width: 200,
-                                        child: Image.asset(
-                                          "assets/fruit.png",
-                                          fit: BoxFit.fill,
-                                        ))
-                                  ],
+                                Flexible(
+                                  child: Column(
+                                    children: [
+                                      SizedBox(
+                                          height: 180,
+                                          width: 200,
+                                          child: Image.asset(
+                                            "assets/fruit.png",
+                                            fit: BoxFit.fill,
+                                          ))
+                                    ],
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -271,22 +273,46 @@ class _showDetailState extends State<showDetail> {
             ],
           ),
           Positioned(
-            top: bar_height-100,
+            top: bar_height-150,
             left: _width / 2.5,
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset("assets/profile_1.png"),
-                const Text(
-                  "Shop Name",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SizedBox(
+                        height:100,
+                        width: 100,
+                        child: Image.asset("assets/profile_1.png")),
+
+                  ],
                 ),
-                const Text("Coimbatore")
               ],
             ),
             height: 200,
-            width: 100,
+            // width: _width / 2,
           ),
+          Positioned(
+            top: bar_height+50,
+              left: _width/25,
+              height: 40,
+              width: _width,
+              child: Container(
+                color: Colors.white,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+                Flexible(
+                  child: Text(
+                    "Shop Name",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                ),
+                Flexible(child: Text("Coimbatore"))
+            ],
+          ),
+              ))
         ],
       ),
     );

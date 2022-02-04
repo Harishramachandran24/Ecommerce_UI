@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:gmart_2/viewers.dart';
 
 class show_product extends StatefulWidget {
   const show_product({Key? key}) : super(key: key);
@@ -99,7 +100,12 @@ class _show_prouctState extends State<show_product> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                   height: 40.0,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) =>  viewers()),
+                                    );
+                                  },
                                   color: Colors.green,
                                   child: Row(
                                     children: const [

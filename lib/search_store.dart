@@ -82,7 +82,7 @@ class _search_store extends State<search_store>
                             onTap: (){
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => show_product()),
+                                MaterialPageRoute(builder: (context) => const show_product()),
                               );
                             },
                             child: Container(

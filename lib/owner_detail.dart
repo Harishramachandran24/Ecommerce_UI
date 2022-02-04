@@ -9,7 +9,7 @@ class showDetail extends StatefulWidget {
 }
 
 class _showDetailState extends State<showDetail> {
-   AppBar _appbar = AppBar(
+  AppBar _appbar = AppBar(
     backgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
     actions: [
@@ -273,7 +273,7 @@ class _showDetailState extends State<showDetail> {
             ],
           ),
           Positioned(
-            top: bar_height-150,
+            top: bar_height - 150,
             left: _width / 2.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -282,10 +282,9 @@ class _showDetailState extends State<showDetail> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
-                        height:100,
+                        height: 100,
                         width: 100,
                         child: Image.asset("assets/profile_1.png")),
-
                   ],
                 ),
               ],
@@ -294,24 +293,25 @@ class _showDetailState extends State<showDetail> {
             // width: _width / 2,
           ),
           Positioned(
-            top: bar_height+50,
-              left: _width/25,
+              top: bar_height + 50,
+              left: _width / 25,
               height: 40,
               width: _width,
               child: Container(
                 color: Colors.white,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-                Flexible(
-                  child: Text(
-                    "Shop Name",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
+                  children: const [
+                    Flexible(
+                      child: Text(
+                        "Shop Name",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 18),
+                      ),
+                    ),
+                    Flexible(child: Text("Coimbatore"))
+                  ],
                 ),
-                Flexible(child: Text("Coimbatore"))
-            ],
-          ),
               ))
         ],
       ),

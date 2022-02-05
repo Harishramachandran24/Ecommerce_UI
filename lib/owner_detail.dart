@@ -35,7 +35,7 @@ class _showDetailState extends State<showDetail> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                  height: _height - 150,
+                  height: _height - 200,
                   width: _width,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(

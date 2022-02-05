@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
@@ -21,7 +20,6 @@ class _search_store extends State<search_store>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           ClipPath(
@@ -35,8 +33,13 @@ class _search_store extends State<search_store>
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top:28.0),
-                        child: IconButton(onPressed: (){}, icon: const Icon(Icons.notifications,color: Colors.white,)),
+                        padding: const EdgeInsets.only(top: 28.0),
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.notifications,
+                              color: Colors.white,
+                            )),
                       )
                     ],
                   ),

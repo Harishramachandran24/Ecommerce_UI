@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -209,6 +208,10 @@ class _viewers extends State<viewers> {
                         children: [
                           Column(
                             children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Category"),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -343,6 +346,10 @@ class _viewers extends State<viewers> {
                         children: [
                           Column(
                             children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Category"),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -477,6 +484,10 @@ class _viewers extends State<viewers> {
                         children: [
                           Column(
                             children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Category"),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -611,6 +622,10 @@ class _viewers extends State<viewers> {
                         children: [
                           Column(
                             children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Category"),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -745,6 +760,10 @@ class _viewers extends State<viewers> {
                         children: [
                           Column(
                             children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text("Category"),
+                              ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(

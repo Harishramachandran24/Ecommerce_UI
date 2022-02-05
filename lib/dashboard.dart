@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
@@ -6,12 +5,12 @@ import 'package:gmart_2/search_store.dart';
 
 import 'owner_detail.dart';
 
-class CustomSliverAppbar extends StatefulWidget {
+class dashboard extends StatefulWidget {
   @override
-  _CustomSliverAppbarState createState() => _CustomSliverAppbarState();
+  _dashboardState createState() => _dashboardState();
 }
 
-class _CustomSliverAppbarState extends State<CustomSliverAppbar>
+class _dashboardState extends State<dashboard>
     with SingleTickerProviderStateMixin {
   @override
   void initState() {

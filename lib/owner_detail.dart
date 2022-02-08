@@ -9,7 +9,7 @@ class showDetail extends StatefulWidget {
 }
 
 class _showDetailState extends State<showDetail> {
-  AppBar _appbar = AppBar(
+  final AppBar _appbar = AppBar(
     backgroundColor: Colors.transparent,
     shadowColor: Colors.transparent,
     actions: [
@@ -273,7 +273,7 @@ class _showDetailState extends State<showDetail> {
             ],
           ),
           Positioned(
-            top: bar_height - 150,
+            top: bar_height - 100,
             left: _width / 2.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -293,7 +293,7 @@ class _showDetailState extends State<showDetail> {
             // width: _width / 2,
           ),
           Positioned(
-              top: bar_height + 50,
+              top: bar_height + 100,
               left: _width / 25,
               height: 40,
               width: _width,

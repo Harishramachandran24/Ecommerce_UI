@@ -13,7 +13,6 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   TextEditingController nameController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final _height = MediaQuery.of(context).size.height;

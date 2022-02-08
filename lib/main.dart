@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gmart_2/home.dart';
 import 'package:gmart_2/search_store.dart';
+import 'package:gmart_2/user_settings.dart';
+import 'add_product.dart';
 import 'dashboard.dart';
 import 'owner_detail.dart';
 
@@ -51,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _selectedIndex = index;
       if (_pageController.hasClients) {
         _pageController.animateToPage(index,
-            duration: Duration(seconds: 1), curve: Curves.easeOut);
+            duration: const Duration(seconds: 1), curve: Curves.easeOut);
       }
     });
   }
@@ -79,14 +81,19 @@ class _MyHomePageState extends State<MyHomePage> {
           home(),
           search_store(),
           dashboard(),
-          showDetail(),
+          user_settings(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: showFab
           ? FloatingActionButton(
-              backgroundColor: Color.fromRGBO(0, 228, 146, 1),
-              onPressed: () {},
+              backgroundColor: Colors.teal,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Add_product()),
+                );
+              },
               child: const Icon(
                 Icons.add,
                 color: Colors.white,
@@ -104,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
               iconSize: 20.0,
               type: BottomNavigationBarType.fixed,
               backgroundColor: Colors.green,
-              selectedItemColor: Colors.black,
+              selectedItemColor: Colors.teal,
               unselectedItemColor: Colors.white,
               currentIndex: _selectedIndex,
               onTap: (int index) {

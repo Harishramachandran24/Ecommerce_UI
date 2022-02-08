@@ -19,76 +19,118 @@ class _search_store extends State<search_store>
 
   @override
   Widget build(BuildContext context) {
+    final _height = MediaQuery.of(context).size.height;
+    // final _width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: [
-          ClipPath(
-            clipper: CurvedBottomClipper(),
-            child: Container(
-              color: Colors.green,
-              height: 250.0,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 28.0),
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.notifications,
-                              color: Colors.white,
-                            )),
-                      )
-                    ],
-                  ),
-                  Center(
-                      child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 60, left: 40, bottom: 50, right: 25),
-                    child: Container(
-                      width: double.infinity,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          color: Color(0xFFe9eaec),
-                          borderRadius: BorderRadius.circular(15)),
-                      child: TextField(
-                        cursorColor: const Color(0xFF000000),
-                        controller: _searchController,
-                        decoration: InputDecoration(
-                            prefixIcon: Icon(
-                              Icons.search,
-                              color: const Color(0xFF000000).withOpacity(0.5),
-                            ),
-                            hintText: "Search",
-                            border: InputBorder.none),
-                      ),
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ClipPath(
+              clipper: CurvedBottomClipper(),
+              child: Container(
+                color: Colors.green,
+                height: 250.0,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 28.0),
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.notifications,
+                                color: Colors.white,
+                              )),
+                        )
+                      ],
                     ),
-                  )),
-                ],
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 60, left: 40, bottom: 50, right: 25),
+                          child: Container(
+                            width: double.infinity,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: const Color(0xFFe9eaec),
+                                borderRadius: BorderRadius.circular(15)),
+                            child: TextField(
+                              cursorColor: const Color(0xFF000000),
+                              controller: _searchController,
+                              decoration: InputDecoration(
+                                  prefixIcon: Icon(
+                                    Icons.search,
+                                    color: const Color(0xFF000000)
+                                        .withOpacity(0.5),
+                                  ),
+                                  hintText: "Search",
+                                  border: InputBorder.none),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          InkWell(
-                            onTap: (){
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => const show_product()),
-                              );
-                            },
-                            child: Container(
+            SizedBox(
+              height: _height / 1.7,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const show_product()),
+                                );
+                              },
+                              child: Container(
+                                height: 150,
+                                width: 150,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.green)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: SizedBox(
+                                        height: 100,
+                                        width: 90,
+                                        child: Image.asset(
+                                          "assets/crate.png",
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                              child: Text("Market"),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
                               height: 150,
                               width: 150,
                               decoration: BoxDecoration(
@@ -103,126 +145,96 @@ class _search_store extends State<search_store>
                                       height: 100,
                                       width: 90,
                                       child: Image.asset(
-                                        "assets/crate.png",
+                                        "assets/fertilizer.png",
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                            child: Text("Market"),
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: 150,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.green)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SizedBox(
-                                    height: 100,
-                                    width: 90,
-                                    child: Image.asset(
-                                      "assets/fertilizer.png",
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                            child: Text("Fertilizer"),
-                          )
-                        ],
-                      ),
-                    ],
+                            const Padding(
+                              padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                              child: Text("Fertilizer"),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: 150,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.green)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SizedBox(
-                                    height: 100,
-                                    width: 100,
-                                    child: Image.asset(
-                                      "assets/tractor.png",
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          children: [
+                            Container(
+                              height: 150,
+                              width: 150,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(color: Colors.green)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SizedBox(
+                                      height: 100,
+                                      width: 100,
+                                      child: Image.asset(
+                                        "assets/tractor.png",
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                            child: Text("Services"),
-                          )
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: 150,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border: Border.all(color: Colors.green)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: SizedBox(
-                                    height: 100,
-                                    width: 100,
-                                    child: Image.asset(
-                                      "assets/electric_motor.png",
+                            const Padding(
+                              padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                              child: Text("Services"),
+                            )
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              height: 150,
+                              width: 150,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(color: Colors.green)),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: SizedBox(
+                                      height: 100,
+                                      width: 100,
+                                      child: Image.asset(
+                                        "assets/electric_motor.png",
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
-                            child: Text("Capital Equipment"),
-                          )
-                        ],
-                      ),
-                    ],
+                            const Padding(
+                              padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                              child: Text("Capital Equipment"),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
